@@ -240,7 +240,7 @@ export default function Home() {
           {/* Кнопка добавить */}
           <button
             onClick={addToCart}
-            className="w-full bg-blue-500 text-white py-4 rounded-2xl font-medium text-lg"
+            className="fixed-bottom-button"
             style={{ marginBottom: '20px' }}
           >
             {t.addToCart}
@@ -273,7 +273,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">{t.cart}</h2>
           
           {cart.map((item) => (
-            <div key={item.cartId} className="bg-white rounded-xl p-3 mb-3 flex gap-3">
+            <div key={item.cartId} className="cart-item flex gap-3">
               <img 
                 src={item.images[0]} 
                 alt={item.name}
@@ -305,7 +305,7 @@ export default function Home() {
           </div>
           <button
             onClick={() => setView('checkout')}
-            className="w-full bg-blue-500 text-white py-4 rounded-2xl font-medium text-lg"
+            className="fixed-bottom-button"
           >
             {t.checkout}
           </button>
@@ -421,7 +421,7 @@ export default function Home() {
 
             <button
               onClick={handleSubmit}
-              className="w-full bg-blue-500 text-white py-4 rounded-2xl font-medium text-lg"
+              className="fixed-bottom-button"
             >
               {t.confirmOrder}
             </button>
